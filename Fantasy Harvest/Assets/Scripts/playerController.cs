@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-    private CharacterController controller;
-
     [Header("----Player Attributes----")]
+    [SerializeField] CharacterController controller;
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
@@ -17,7 +16,7 @@ public class playerController : MonoBehaviour
 
     private void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+
     }
 
     void Update()
