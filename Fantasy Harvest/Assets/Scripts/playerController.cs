@@ -9,7 +9,7 @@ public class playerController : MonoBehaviour
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
-    [SerializeField] int playerMaxJumps;
+    //[SerializeField] int playerMaxJumps;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;

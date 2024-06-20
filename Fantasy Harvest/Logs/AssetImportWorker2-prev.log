@@ -15,7 +15,7 @@ C:/Users/ashty/Documents/GitHub/FantasyHarvest/Fantasy Harvest
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-52269
+61658
 Successfully changed project path to: C:/Users/ashty/Documents/GitHub/FantasyHarvest/Fantasy Harvest
 C:/Users/ashty/Documents/GitHub/FantasyHarvest/Fantasy Harvest
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/ashty/Documents/GitHub/FantasyHarvest/Fantasy Harvest
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [9084] Host "[IP] 192.168.1.146 [Port] 0 [Flags] 2 [Guid] 3601954137 [EditorId] 3601954137 [Version] 1048832 [Id] WindowsEditor(7,Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [23848] Host "[IP] 192.168.1.146 [Port] 0 [Flags] 2 [Guid] 1797219995 [EditorId] 1797219995 [Version] 1048832 [Id] WindowsEditor(7,Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [9084] Host "[IP] 192.168.1.146 [Port] 0 [Flags] 2 [Guid] 3601954137 [EditorId] 3601954137 [Version] 1048832 [Id] WindowsEditor(7,Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [23848] Host "[IP] 192.168.1.146 [Port] 0 [Flags] 2 [Guid] 1797219995 [EditorId] 1797219995 [Version] 1048832 [Id] WindowsEditor(7,Computer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
-Refreshing native plugins compatible for Editor in 4.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 87.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.19f1 (244b723c30a6)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Resources/UnitySubsystems
@@ -70,46 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56140
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56164
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005792 seconds.
-- Loaded All Assemblies, in  0.258 seconds
+Registered in 0.004722 seconds.
+- Loaded All Assemblies, in  0.970 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.198 seconds
-Domain Reload Profiling: 455ms
-	BeginReloadAssembly (73ms)
+- Finished resetting the current domain, in  0.242 seconds
+Domain Reload Profiling: 1211ms
+	BeginReloadAssembly (83ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (22ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (250ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (110ms)
-		LoadAssemblies (72ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (581ms)
+		LoadAssemblies (82ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (108ms)
-			TypeCache.Refresh (107ms)
-				TypeCache.ScanAssembly (97ms)
+		AnalyzeDomain (579ms)
+			TypeCache.Refresh (577ms)
+				TypeCache.ScanAssembly (564ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (198ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (242ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (155ms)
+		SetupLoadedEditorAssemblies (181ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
+			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (110ms)
-			ProcessInitializeOnLoadMethodAttributes (32ms)
+			ProcessInitializeOnLoadAttributes (123ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,97 +117,308 @@ Domain Reload Profiling: 455ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.473 seconds
-Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.576 seconds
+Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.405 seconds
-Domain Reload Profiling: 876ms
-	BeginReloadAssembly (120ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (26ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (280ms)
-		LoadAssemblies (234ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (117ms)
-			TypeCache.Refresh (104ms)
-				TypeCache.ScanAssembly (91ms)
-			ScanForSourceGeneratedMonoScriptInfo (10ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (405ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (296ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (40ms)
-			ProcessInitializeOnLoadAttributes (231ms)
-			ProcessInitializeOnLoadMethodAttributes (14ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3126 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.4 KB). Loaded Objects now: 3588.
-Memory consumption went from 124.2 MB to 124.1 MB.
-Total: 2.326200 ms (FindLiveObjects: 0.187600 ms CreateObjectMapping: 0.071100 ms MarkObjects: 1.984300 ms  DeleteObjects: 0.082500 ms)
+Could not allocate 8192 bytes
+Crash!!!
+SymInit: Symbol-SearchPath: 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Mono;.;C:\Users\ashty\Documents\GitHub\FantasyHarvest\Fantasy Harvest;C:\Users\ashty\Documents\GitHub\FantasyHarvest\Fantasy Harvest\Library\BurstCache\JIT;C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'ashty'
+OS-Version: 10.0.0
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Unity.exe:Unity.exe (00007FF67E090000), size: 82350080 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2022.3.19.19314
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF990070000), size: 2191360 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF98EF00000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF98D600000), size: 3850240 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\SYSTEM32\apphelp.dll:apphelp.dll (00007FF9889B0000), size: 618496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF98DA80000), size: 1470464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF98D3A0000), size: 1118208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3593
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF98ED50000), size: 1761280 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF98D9B0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF98F350000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF98DBF0000), size: 1150976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF98DD10000), size: 630784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3374
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF98E810000), size: 729088 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF98E8D0000), size: 684032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.22621.2506
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF98EB20000), size: 696320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FF93F650000), size: 10067968 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.3.0
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF98DA50000), size: 163840 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF98E210000), size: 1134592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF98F720000), size: 8765440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF98EAC0000), size: 385024 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF98F080000), size: 1724416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\combase.dll:combase.dll (00007FF98F390000), size: 3702784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF98DDB0000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3374
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF98E390000), size: 4669440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF98EBD0000), size: 462848 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF98E980000), size: 880640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\WINTRUST.dll:WINTRUST.dll (00007FF98D9E0000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3737
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\ispc_texcomp.dll:ispc_texcomp.dll (00007FF941ED0000), size: 1826816 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\s3tcompress.dll:s3tcompress.dll (00007FF985CA0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF986250000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.1812.6001
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\umbraoptimizer64.dll:umbraoptimizer64.dll (00007FF95F670000), size: 1187840 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF9201C0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF920190000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF98BE00000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF988F90000), size: 1269760 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF9860C0000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF98BBB0000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF98AB20000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\compress_bc7e.dll:compress_bc7e.dll (00007FF957C80000), size: 1433600 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\SketchUpAPI.dll:SketchUpAPI.dll (00007FF918920000), size: 8990720 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF985450000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FF9861C0000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF97BCD0000), size: 577536 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 14.40.33810.0
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF97BD90000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.40.33810.0
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\SketchUpCommonPreferences.dll:SketchUpCommonPreferences.dll (00007FF97E650000), size: 499712 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 23.0.0.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF97BC40000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.40.33810.0
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF98C1B0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF98A9C0000), size: 233472 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF98C630000), size: 311296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\OpenRL.dll:OpenRL.dll (0000000180000000), size: 12779520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.0.2907
+C:\Windows\SYSTEM32\MSVCP100.dll:MSVCP100.dll (000000005A4F0000), size: 622592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Windows\SYSTEM32\MSVCR100.dll:MSVCR100.dll (000000005A410000), size: 860160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\etccompress.dll:etccompress.dll (00007FF93F170000), size: 5066752 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\embree.dll:embree.dll (00007FF917930000), size: 16711680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.14.0.0
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\tbb.dll:tbb.dll (00007FF978C00000), size: 413696 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 2017.0.2016.1004
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\MSVCR120.dll:MSVCR120.dll (00007FF972B50000), size: 978944 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 12.0.21005.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\MSVCP120.dll:MSVCP120.dll (00007FF972F80000), size: 679936 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 12.0.21005.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\OpenRL_pthread.dll:OpenRL_pthread.dll (000002A7E3D10000), size: 61440 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 2.9.0.0
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\FreeImage.dll:FreeImage.dll (000002A7E3D20000), size: 6582272 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 3.18.0.0
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\cfgmgr32.DLL:cfgmgr32.DLL (00007FF98CF90000), size: 319488 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.2506
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\MSWSOCK.DLL:MSWSOCK.DLL (00007FF98C840000), size: 430080 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.2506
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FF98CF40000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\System32\bcryptprimitives.dll:bcryptprimitives.dll (00007FF98D580000), size: 503808 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF98C3D0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2715
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF98A7E0000), size: 696320 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF98B2B0000), size: 9400320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF98B170000), size: 1306624 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\SHCORE.dll:SHCORE.dll (00007FF98F240000), size: 999424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3733
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF98D2D0000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\Windows\system32\IconCodecService.dll:IconCodecService.dll (00007FF986540000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FF98A5F0000), size: 1769472 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3672
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF98EFD0000), size: 720896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\netprofm.dll:netprofm.dll (00007FF98A270000), size: 491520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\Windows\System32\npmproxy.dll:npmproxy.dll (00007FF985FE0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3527
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF98F230000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF9890D0000), size: 102400 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF988D30000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.2506
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF98BE70000), size: 1015808 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3733
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF9631D0000), size: 94208 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF962FB0000), size: 110592 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF962F90000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.1
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF986550000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.22621.3374
+C:\Windows\system32\nlansp_c.dll:nlansp_c.dll (00007FF962F60000), size: 159744 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\fwpuclnt.dll:fwpuclnt.dll (00007FF9863C0000), size: 536576 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3235
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FF9890F0000), size: 40960 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\NVUnityPlugin.DLL:NVUnityPlugin.DLL (00007FF942970000), size: 1519616 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\Tools\astcenc-avx2.dll:astcenc-avx2.dll (00007FF972E00000), size: 540672 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF984990000), size: 643072 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\DEVOBJ.dll:DEVOBJ.dll (00007FF98CF60000), size: 180224 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.2506
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF986FD0000), size: 2453504 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF98AA00000), size: 1011712 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\directxdatabasehelper.dll:directxdatabasehelper.dll (00007FF97DA40000), size: 299008 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF979290000), size: 790528 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF985410000), size: 204800 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF98CAC0000), size: 49152 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF98CB50000), size: 299008 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF9850F0000), size: 1409024 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF98FF80000), size: 126976 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF98CAA0000), size: 110592 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+: (00007FF98C330000), size: 217088 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+:nvgpucomp64.dll (00007FF96EC70000), size: 31649792 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_e08347d07a4d61e2\Display.NvContainer\NvMessageBus.dll:NvMessageBus.dll (00007FF980A60000), size: 3506176 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 3.12.3354.5005
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_e08347d07a4d61e2\nvwgf2umx.dll:nvwgf2umx.dll (00007FF968AC0000), size: 62603264 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 32.0.15.5585
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\powrprof.dll:powrprof.dll (00007FF98D260000), size: 315392 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3374
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF98D240000), size: 77824 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF922820000), size: 2949120 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 3.28.0.412
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF98C3F0000), size: 212992 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF984950000), size: 65536 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF9848D0000), size: 524288 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.2506
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF9806A0000), size: 81920 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF9806C0000), size: 1015808 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3672
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF9805E0000), size: 118784 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3527
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\USERENV.dll:USERENV.dll (00007FF98C940000), size: 163840 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3527
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24050.7-0\MpOav.dll:MpOav.dll (00007FF980550000), size: 528384 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 4.18.24050.7
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\cudart64_90.dll:cudart64_90.dll (00007FF9624F0000), size: 397312 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 6.14.11.9000
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\opencl.dll:opencl.dll (00007FF961DE0000), size: 483328 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 3.0.6.0
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\radeonrays.dll:radeonrays.dll (00007FF961550000), size: 557056 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor\Data\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FF8FE2C0000), size: 10825728 (result: 8), SymType: '-unknown-', PDB: ''
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF984CB0000), size: 2301952 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.3593
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
+C:\Windows\System32\psapi.dll:psapi.dll (00007FF98F340000), size: 32768 (result: 8), SymType: '-unknown-', PDB: '', fileVersion: 10.0.22621.1
+  ERROR: LoadModule, GetLastError: 'Not enough memory resources are available to process this command.' (Address: 0000000000000000)
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 416640.984669 seconds.
-  path: Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/OHS03Polyart.prefab
-  artifactKey: Guid(f0aae4c8b38e02e48a4124483b105340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/OHS03Polyart.prefab using Guid(f0aae4c8b38e02e48a4124483b105340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d85928517cdf17ebb077efa56d13d8a') in 0.206762 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/Shield08Polyart.prefab
-  artifactKey: Guid(f86f26a978127384b85b71f1235c8ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/Shield08Polyart.prefab using Guid(f86f26a978127384b85b71f1235c8ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5bd6ab2770e1cd966a426dfd12f27bf') in 0.015379 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 10
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/Shield05PBR.prefab
-  artifactKey: Guid(ac86f8ddca59acb4184d3eb42067bafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Unity Store Downloads/RPG Tiny Hero Duo/Prefab/Shield05PBR.prefab using Guid(ac86f8ddca59acb4184d3eb42067bafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '507e64481eae8f26c589f77839f66cd6') in 0.151096 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========== OUTPUTTING STACK TRACE ==================
+
+SymInit: Symbol-SearchPath: 'C:/Program Files/Unity/Hub/Editor/2022.3.19f1/Editor/Data/Mono;.;C:\Users\ashty\Documents\GitHub\FantasyHarvest\Fantasy Harvest;C:\Users\ashty\Documents\GitHub\FantasyHarvest\Fantasy Harvest\Library\BurstCache\JIT;C:\Program Files\Unity\Hub\Editor\2022.3.19f1\Editor;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'ashty'
+OS-Version: 10.0.0
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF98D65F39C)
+0x00007FF98D65F39C (KERNELBASE) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE330C0C)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE330C0C)
+0x00007FF8FE330C0C ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE31C822)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE31C822)
+0x00007FF8FE31C822 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE31C888)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE31C888)
+0x00007FF8FE31C888 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE443BD3)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE443BD3)
+0x00007FF8FE443BD3 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE37B54C)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE37B54C)
+0x00007FF8FE37B54C ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE39472B)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE39472B)
+0x00007FF8FE39472B ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE38F0BF)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE38F0BF)
+0x00007FF8FE38F0BF ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE655F1A)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE655F1A)
+0x00007FF8FE655F1A ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE65EB57)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE65EB57)
+0x00007FF8FE65EB57 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE662032)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE662032)
+0x00007FF8FE662032 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE550891)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE550891)
+0x00007FF8FE550891 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE546C4A)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE546C4A)
+0x00007FF8FE546C4A ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE54AC1A)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE54AC1A)
+0x00007FF8FE54AC1A ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE54B597)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE54B597)
+0x00007FF8FE54B597 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE55276C)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE55276C)
+0x00007FF8FE55276C ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE64CD78)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE64CD78)
+0x00007FF8FE64CD78 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE64D7F8)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE64D7F8)
+0x00007FF8FE64D7F8 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 000002A9521A03A6)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 000002A9521A03A6)
+0x000002A9521A03A6 ((<unknown>)) (function-name not available)
+0x000002A7E1FA6F5B (Mono JIT Code) System.Linq.Enumerable:SequenceEqual<TSource_REF> (System.Collections.Generic.IEnumerable`1<TSource_REF>,System.Collections.Generic.IEnumerable`1<TSource_REF>)
+0x000002A7E1FA5C4B (Mono JIT Code) UnityEditor.DiagnosticSwitchesConsoleMessage:Update ()
+0x000002A7E1FA58EB (Mono JIT Code) UnityEditor.DiagnosticSwitchesConsoleMessage:OnEnable ()
+0x000002A977472E28 (Mono JIT Code) (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE554B7E)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE554B7E)
+0x00007FF8FE554B7E ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE48D204)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE48D204)
+0x00007FF8FE48D204 ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'The specified module could not be found.' (Address: 00007FF8FE48D37C)
+  ERROR: SymGetModuleInfo64, GetLastError: 'A dynamic link library (DLL) initialization routine failed.' (Address: 00007FF8FE48D37C)
+0x00007FF8FE48D37C ((<unknown>)) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F1862B4)
+0x00007FF67F1862B4 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F1641A4)
+0x00007FF67F1641A4 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F16428E)
+0x00007FF67F16428E (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F2069E6)
+0x00007FF67F2069E6 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F14D083)
+0x00007FF67F14D083 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F2062BA)
+0x00007FF67F2062BA (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67F14EDCF)
+0x00007FF67F14EDCF (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF68053FD2A)
+0x00007FF68053FD2A (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6800EDAFB)
+0x00007FF6800EDAFB (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6805ED26F)
+0x00007FF6805ED26F (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF680627352)
+0x00007FF680627352 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6806132FE)
+0x00007FF6806132FE (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF680614F2E)
+0x00007FF680614F2E (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6806256FC)
+0x00007FF6806256FC (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6805F925F)
+0x00007FF6805F925F (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6805C4197)
+0x00007FF6805C4197 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF6805C421B)
+0x00007FF6805C421B (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF67FDC8101)
+0x00007FF67FDC8101 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF680251235)
+0x00007FF680251235 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF68162F21E)
+0x00007FF68162F21E (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF98EF1257D)
+0x00007FF98EF1257D (KERNEL32) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.' (Address: 00007FF9900CAF28)
+0x00007FF9900CAF28 (ntdll) (function-name not available)
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/ashty/AppData/Local/Temp/Unity/Editor/Crashes
