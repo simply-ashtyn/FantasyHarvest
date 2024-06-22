@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.InputSystem;
+//using TMPro;
 
 public class playerController : MonoBehaviour
 {
@@ -9,8 +11,8 @@ public class playerController : MonoBehaviour
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
-    //[SerializeField] int playerMaxJumps;
-
+    [SerializeField] float turnSmoothTime;
+  
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
@@ -20,12 +22,18 @@ public class playerController : MonoBehaviour
     }
 
     void Update()
-    {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+    {       
+        if (controller.transform.transform.position.y < 0.01) {
+           groundedPlayer = true;
+        }
+
+        if (groundedPlayer && playerVelocity.y < 0.5)
         {
             playerVelocity.y = 0f;
         }
+
+        //IDK what this does
+
 
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
@@ -38,10 +46,11 @@ public class playerController : MonoBehaviour
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
-            playerVelocity.y += Mathf.Sqrt(playerJumpHeight * -3.0f * gravityValue);
+            playerVelocity.y = playerJumpHeight; //+= Mathf.Sqrt(playerJumpHeight * -3.0f * gravityValue);
+            groundedPlayer = false;
         }
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
+        playerVelocity.y -= gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
 }
