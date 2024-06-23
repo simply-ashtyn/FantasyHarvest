@@ -10,7 +10,7 @@ public class gameManager : MonoBehaviour
 
     public GameObject pauseMenu;
     public bool isPaused;
-
+    float timeScaleOrig;
 
     // Start is called before the first frame update
     void Awake()
@@ -18,6 +18,8 @@ public class gameManager : MonoBehaviour
         instance = this;
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<playerController>();
+
+        timeScaleOrig = Time.timeScale;
     }
 
     // Update is called once per frame
@@ -27,6 +29,28 @@ public class gameManager : MonoBehaviour
         {
             isPaused = !isPaused;
             pauseMenu.SetActive(isPaused);
+
+            if (isPaused )
+            {
+                CursorUnlock();
+            }
+            else
+                CursorLock();
         }
+    }
+
+    public void CursorUnlock()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Time.timeScale = 0;
+    }   
+    
+    public void CursorLock()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = timeScaleOrig;
+        pauseMenu.SetActive(false);
     }
 }

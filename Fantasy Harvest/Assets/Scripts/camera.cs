@@ -21,8 +21,6 @@ public class camera : MonoBehaviour
 
     void LateUpdate()
     {
-        if (gameManager.instance.isPaused == false)
-        {
             //Get input
             float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensHori;
             float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensVert;
@@ -44,6 +42,5 @@ public class camera : MonoBehaviour
 
             //Rotate the player
             transform.parent.Rotate(Vector3.up * mouseX); 
-        }
     }
 }

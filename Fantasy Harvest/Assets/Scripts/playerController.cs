@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
 {
     [Header("----Player Attributes----")]
     [SerializeField] CharacterController controller;
+    [SerializeField] int playerHP;
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
@@ -31,11 +32,8 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.instance.isPaused == false)
-        {
-            Movement();
-            StartCoroutine(Shoot()); 
-        }
+        Movement();
+        StartCoroutine(Shoot());
     }
 
     void Movement()
@@ -72,7 +70,7 @@ public class playerController : MonoBehaviour
 
             //Did it hit something
             RaycastHit hit;
-            if(Physics.Raycast(Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f)), out hit, spellRange))
+            if (Physics.Raycast(Camera.main.ViewportPointToRay(new Vector2(0.5f, 0.5f)), out hit, spellRange))
             {
                 /// LONG DIST SHOOTING FOR ATTACKS
                 if (hit.collider.GetComponent<IDamageable>() != null)
@@ -96,4 +94,6 @@ public class playerController : MonoBehaviour
             spellActive = false;
         }
     }
+
+    
 }
