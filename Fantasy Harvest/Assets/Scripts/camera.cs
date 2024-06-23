@@ -21,26 +21,29 @@ public class camera : MonoBehaviour
 
     void LateUpdate()
     {
-        //Get input
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensHori;
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensVert;
-
-        if (invert)
+        if (gameManager.instance.isPaused == false)
         {
-            xRotation += mouseY;
+            //Get input
+            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * sensHori;
+            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * sensVert;
+
+            if (invert)
+            {
+                xRotation += mouseY;
+            }
+            else
+            {
+                xRotation -= mouseY;
+            }
+
+            //Clamp Rotation
+            xRotation = Mathf.Clamp(xRotation, lockVertMin, lockVettMax);
+
+            //Rotate Camera on X Axis
+            transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+
+            //Rotate the player
+            transform.parent.Rotate(Vector3.up * mouseX); 
         }
-        else
-        {
-            xRotation -= mouseY;
-        }
-
-        //Clamp Rotation
-        xRotation = Mathf.Clamp(xRotation, lockVertMin, lockVettMax);
-
-        //Rotate Camera on X Axis
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
-
-        //Rotate the player
-        transform.parent.Rotate(Vector3.up * mouseX);
     }
 }
