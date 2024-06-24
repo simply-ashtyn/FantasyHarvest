@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.InputSystem;
-//using TMPro;
+using UnityEngine.InputSystem;
+using TMPro;
 
 public class playerController : MonoBehaviour
 {
     [Header("----Player Attributes----")]
     [SerializeField] CharacterController controller;
+    [SerializeField] PlayerInput playerInput;
+    [SerializeField] Animator animator;
     [SerializeField] int playerHP;
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
-    [SerializeField] float turnSmoothTime;
 
     [Header("----Spell Attributes----")]
     [SerializeField] GameObject spell;
@@ -20,10 +21,20 @@ public class playerController : MonoBehaviour
     [SerializeField] int spellRange;
     [SerializeField] int spellDamage;
 
+    [Header("----Sword Attributes----")]
+    [SerializeField] Collider swordCollider;
+    [SerializeField] GameObject sword;
+    [SerializeField] GameObject staff;
+    [SerializeField] float swingRate;
+
+    [Header("----Trigger Action----")]
+    [SerializeField] string onSwing;
+
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     Vector3 move;
     bool spellActive;
+    private bool isSwinging;
 
     private void Start()
     {
@@ -62,6 +73,19 @@ public class playerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    private void TriggerAction(string action)
+    {
+        if (action == "")
+        {
+            return;
+        }
+
+        //foreach (DialogTrigger trigger in GetComponents<DialogTrigger>())
+        //{
+        //    trigger.Trigger(action);
+        //}
+    }
+
     IEnumerator Shoot()
     {
         if (!spellActive && Input.GetButton("Shoot"))
@@ -87,7 +111,7 @@ public class playerController : MonoBehaviour
 
 
                 //create object where the player is pointing and is facing
-                // Instantiate(spell, hit.point, transform.rotation); // spell.transform.rotation - uses the items rotation not the players (needed for spells?)
+                Instantiate(spell, hit.point, transform.rotation); // spell.transform.rotation - uses the items rotation not the players (needed for spells?)
             }
 
             yield return new WaitForSeconds(spellUseRate);
@@ -95,5 +119,19 @@ public class playerController : MonoBehaviour
         }
     }
 
-    
+    IEnumerator Swing()
+    {
+        if (!isSwinging && playerInput.actions["Attack"].triggered)
+        {
+            isSwinging = true;
+            swordCollider.enabled = true;
+            animator.SetInteger("SwordAttack", Random.Range(1, 4));
+
+            yield return new WaitForSeconds(swingRate);
+            isSwinging = false;
+            animator.SetInteger("SwordAttack", 0);
+
+            TriggerAction(onSwing);
+        }
+    }
 }
