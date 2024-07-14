@@ -2072,7 +2072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!136 &854424572
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2159,6 +2159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 854424577}
+  rend: {fileID: 854424573}
   enemyHP: 5
 --- !u!4 &854424576
 Transform:

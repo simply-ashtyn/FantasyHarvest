@@ -7,6 +7,7 @@ public class enemyAI : MonoBehaviour, IDamageable
 {
     [Header("----Enemy Stats----")]
     [SerializeField] NavMeshAgent agent;
+    [SerializeField] Renderer rend;
     [SerializeField] int enemyHP;
 
 
@@ -25,9 +26,17 @@ public class enemyAI : MonoBehaviour, IDamageable
     public void TakeDamage(int dmg)
     {
         enemyHP -= dmg;
+        StartCoroutine(flashColor());
         if (enemyHP <= 0)
         {
             Destroy(gameObject); 
         }
+    }
+    
+    IEnumerator flashColor()
+    {
+        rend.material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        rend.material.color = Color.white;
     }
 }
