@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
-public class playerController : MonoBehaviour
+public class playerController : MonoBehaviour, IDamageable
 {
     [Header("----Player Attributes----")]
     [SerializeField] CharacterController controller;
@@ -44,7 +44,7 @@ public class playerController : MonoBehaviour
     void Update()
     {
         Movement();
-        StartCoroutine(Shoot());
+        StartCoroutine(ActivateSpell());
     }
 
     void Movement()
@@ -86,7 +86,8 @@ public class playerController : MonoBehaviour
         //}
     }
 
-    IEnumerator Shoot()
+    /// FOR WORK RELATED SPELLS, NOT FOR "SHOOTING" ENEMIES
+    IEnumerator ActivateSpell()
     {
         if (!spellActive && Input.GetButton("Shoot"))
         {
@@ -117,6 +118,24 @@ public class playerController : MonoBehaviour
             yield return new WaitForSeconds(spellUseRate);
             spellActive = false;
         }
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        playerHP -= dmg;
+        StartCoroutine(DamageFlash());
+
+        if (playerHP <= 0)
+        {
+
+        }
+    }
+
+    IEnumerator DamageFlash() 
+    {
+        gameManager.instance.playerDamaged.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        gameManager.instance.playerDamaged.SetActive(false);
     }
 
     IEnumerator Swing()

@@ -8,6 +8,8 @@ public class gameManager : MonoBehaviour
     public GameObject player;
     public playerController playerController;
 
+    public GameObject playerDamaged;
+
     public GameObject pauseMenu;
     public bool isPaused;
     float timeScaleOrig;

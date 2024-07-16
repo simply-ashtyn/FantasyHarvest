@@ -9,6 +9,15 @@ public class enemyAI : MonoBehaviour, IDamageable
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Renderer rend;
     [SerializeField] int enemyHP;
+    [SerializeField] float playerFaceSpeed;
+
+    [Header("----Enemy Weapon Stats----")]
+    [SerializeField] float shootRate;
+    [SerializeField] GameObject enemySpell;
+    [SerializeField] Transform enemyShootPosition;
+
+    Vector3 playerDirection;
+    bool isShooting;
 
 
     // Start is called before the first frame update
@@ -20,23 +29,47 @@ public class enemyAI : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        //agent.SetDestination(gameManager.instance.player.transform.position);
+        playerDirection = gameManager.instance.player.transform.position - transform.position;
+        agent.SetDestination(gameManager.instance.player.transform.position);
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            FacePlayer();
+            if (!isShooting)
+            {
+                StartCoroutine(EnemyShoot());
+            }
+        }
+    }
+
+    void FacePlayer()
+    {
+        playerDirection.y = 0;
+        Quaternion rotation = Quaternion.LookRotation(playerDirection);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * playerFaceSpeed);
     }
 
     public void TakeDamage(int dmg)
     {
         enemyHP -= dmg;
-        StartCoroutine(flashColor());
+        StartCoroutine(FlashColor());
         if (enemyHP <= 0)
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
-    
-    IEnumerator flashColor()
+
+    IEnumerator FlashColor()
     {
         rend.material.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         rend.material.color = Color.white;
+    }
+
+    IEnumerator EnemyShoot()
+    {
+        isShooting = true;
+        Instantiate(enemySpell, enemyShootPosition.position, transform.rotation);
+        yield return new WaitForSeconds(shootRate);
+        isShooting = false;
     }
 }

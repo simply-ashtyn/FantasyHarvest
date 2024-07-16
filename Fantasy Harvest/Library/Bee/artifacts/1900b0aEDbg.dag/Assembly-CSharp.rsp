@@ -367,6 +367,7 @@
 "Assets/Scripts/Environment/door.cs"
 "Assets/Scripts/IDamageable.cs"
 "Assets/Scripts/player/playerController.cs"
+"Assets/Scripts/Projectile.cs"
 "Assets/Scripts/UI/buttonFunctions.cs"
 "Assets/Scripts/UI/camera.cs"
 "Assets/Scripts/UI/gameManager.cs"
