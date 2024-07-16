@@ -73,6 +73,13 @@ public class playerController : MonoBehaviour, IDamageable
         controller.Move(playerVelocity * Time.deltaTime);
     }
 
+    public void PlayerRespawn()
+    {
+        controller.enabled = false;
+        transform.position = gameManager.instance.playerSpawnPoint.transform.position;
+        controller.enabled = true;
+    }
+
     private void TriggerAction(string action)
     {
         if (action == "")
@@ -127,7 +134,7 @@ public class playerController : MonoBehaviour, IDamageable
 
         if (playerHP <= 0)
         {
-
+            gameManager.instance.isDead = true;
         }
     }
 

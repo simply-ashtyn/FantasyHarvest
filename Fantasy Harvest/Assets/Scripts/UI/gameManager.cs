@@ -7,12 +7,20 @@ public class gameManager : MonoBehaviour
     public static gameManager instance;
     public GameObject player;
     public playerController playerController;
+    public GameObject playerSpawnPoint;
+
+    public GameObject menuManager;
 
     public GameObject playerDamaged;
 
+    // PAUSE MENU ITMES
     public GameObject pauseMenu;
     public bool isPaused;
     float timeScaleOrig;
+
+    // DEATH MENU ITEMS
+    public GameObject deathMenu;
+    public bool isDead;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,6 +28,8 @@ public class gameManager : MonoBehaviour
         instance = this;
         player = GameObject.FindGameObjectWithTag("Player");
         playerController = player.GetComponent<playerController>();
+        playerSpawnPoint = GameObject.Find("PlayerSpawnPoint");
+        playerController.PlayerRespawn();
 
         timeScaleOrig = Time.timeScale;
     }
@@ -30,14 +40,22 @@ public class gameManager : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             isPaused = !isPaused;
-            pauseMenu.SetActive(isPaused);
+            menuManager = pauseMenu;
+            menuManager.SetActive(isPaused);
 
-            if (isPaused )
+            if (isPaused)
             {
                 CursorUnlock();
             }
             else
                 CursorLock();
+        }
+
+        if (isDead)
+        {
+            menuManager = deathMenu;
+            menuManager.SetActive(true);
+            CursorUnlock();
         }
     }
 
@@ -46,13 +64,14 @@ public class gameManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 0;
-    }   
-    
+    }
+
     public void CursorLock()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = timeScaleOrig;
-        pauseMenu.SetActive(false);
+        menuManager.SetActive(false);
+        menuManager = null;
     }
 }
