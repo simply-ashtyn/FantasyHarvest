@@ -22,6 +22,9 @@ public class gameManager : MonoBehaviour
     public GameObject deathMenu;
     public bool isDead;
 
+    // INVENTORY MENU ITEMS
+    public GameObject inventoryMenu;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,7 +40,7 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && !isDead)
         {
             isPaused = !isPaused;
             menuManager = pauseMenu;
@@ -49,6 +52,13 @@ public class gameManager : MonoBehaviour
             }
             else
                 CursorLock();
+        }
+
+        if (Input.GetButtonDown("Inventory"))
+        {
+            menuManager = inventoryMenu;
+            menuManager.SetActive(true);
+            CursorUnlock();
         }
 
         if (isDead)
@@ -71,7 +81,10 @@ public class gameManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = timeScaleOrig;
-        menuManager.SetActive(false);
-        menuManager = null;
+        if (menuManager != null)
+        {
+            menuManager.SetActive(false);
+            menuManager = null;
+        }
     }
 }

@@ -10,13 +10,15 @@ public class playerController : MonoBehaviour, IDamageable
     [SerializeField] CharacterController controller;
     [SerializeField] PlayerInput playerInput;
     [SerializeField] Animator animator;
-    [SerializeField] int playerHP;
+    [SerializeField] float playerHP;
     [SerializeField] float playerSpeed;
     [SerializeField] float playerJumpHeight;
     [SerializeField] float gravityValue;
+    float originalHP;
 
     [Header("----Spell Attributes----")]
     [SerializeField] GameObject spell;
+    [SerializeField] ParticleSystem spellEffect;
     [SerializeField] float spellUseRate;
     [SerializeField] int spellRange;
     [SerializeField] int spellDamage;
@@ -38,7 +40,7 @@ public class playerController : MonoBehaviour, IDamageable
 
     private void Start()
     {
-
+        originalHP = playerHP; // Bug potential with save system, will need to update
     }
 
     void Update()
@@ -78,6 +80,9 @@ public class playerController : MonoBehaviour, IDamageable
         controller.enabled = false;
         transform.position = gameManager.instance.playerSpawnPoint.transform.position;
         controller.enabled = true;
+        if (playerHP == 0)
+            playerHP = originalHP;
+       // gameManager.instance.CursorLock();
     }
 
     private void TriggerAction(string action)
@@ -108,6 +113,7 @@ public class playerController : MonoBehaviour, IDamageable
                 if (hit.collider.GetComponent<IDamageable>() != null)
                 {
                     hit.collider.GetComponent<IDamageable>().TakeDamage(spellDamage);
+                    //spellEffect.Play();
                 }
 
 
@@ -138,7 +144,7 @@ public class playerController : MonoBehaviour, IDamageable
         }
     }
 
-    IEnumerator DamageFlash() 
+    IEnumerator DamageFlash()
     {
         gameManager.instance.playerDamaged.SetActive(true);
         yield return new WaitForSeconds(0.1f);

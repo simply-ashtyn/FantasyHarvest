@@ -20,6 +20,11 @@ public class buttonFunctions : MonoBehaviour
 
     }
 
+    public void Respawn()
+    {
+        gameManager.instance.playerController.PlayerRespawn();
+    }
+
     public void Quit()
     {
         Application.Quit();

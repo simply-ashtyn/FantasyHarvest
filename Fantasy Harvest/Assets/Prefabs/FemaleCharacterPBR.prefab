@@ -2256,12 +2256,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 5093005530884635357}
   playerInput: {fileID: 0}
-  animator: {fileID: 0}
-  playerHP: 0
+  animator: {fileID: 5293598782660525076}
+  playerHP: 10
   playerSpeed: 5
   playerJumpHeight: 10
   gravityValue: 25
   spell: {fileID: 4248695346601778167, guid: 7fd9943d5ae4cc44cb0b37f85ddd9829, type: 3}
+  spellEffect: {fileID: 0}
   spellUseRate: 0.5
   spellRange: 5
   spellDamage: 1
