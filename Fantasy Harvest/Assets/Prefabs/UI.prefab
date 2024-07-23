@@ -2319,10 +2319,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8801343125208187112}
+  - {fileID: 5463277555005290179}
   - {fileID: 1569936706692774482}
   - {fileID: 5106810347572253430}
   - {fileID: 6145485778530433220}
-  - {fileID: 5463277555005290179}
   m_Father: {fileID: 2543778911486071101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3220,6 +3220,7 @@ MonoBehaviour:
   deathMenu: {fileID: 3589765625527802016}
   isDead: 0
   inventoryMenu: {fileID: 5328064077651686184}
+  inventoryOpen: 0
 --- !u!1 &6563391648247217516
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class gameManager : MonoBehaviour
 
     // INVENTORY MENU ITEMS
     public GameObject inventoryMenu;
+    public bool inventoryOpen;
 
     // Start is called before the first frame update
     void Awake()
@@ -40,28 +41,38 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Cancel") && !isDead)
+        if (!isDead)
         {
-            isPaused = !isPaused;
-            menuManager = pauseMenu;
-            menuManager.SetActive(isPaused);
-
-            if (isPaused)
+            if (Input.GetButtonDown("Cancel") && !inventoryOpen)
             {
-                CursorUnlock();
+                isPaused = !isPaused;
+                menuManager = pauseMenu;
+                menuManager.SetActive(isPaused);
+
+                if (isPaused)
+                {
+                    CursorUnlock();
+                }
+                else
+                    CursorLock();
             }
-            else
-                CursorLock();
+
+            if (Input.GetButtonDown("Inventory") && !isPaused)
+            {
+                inventoryOpen = !inventoryOpen;
+                menuManager = inventoryMenu;
+                menuManager.SetActive(inventoryOpen);
+
+                if (inventoryOpen)
+                {
+                    CursorUnlock();
+                }
+                else
+                    CursorLock();
+            }
         }
 
-        if (Input.GetButtonDown("Inventory"))
-        {
-            menuManager = inventoryMenu;
-            menuManager.SetActive(true);
-            CursorUnlock();
-        }
-
-        if (isDead)
+        else
         {
             menuManager = deathMenu;
             menuManager.SetActive(true);

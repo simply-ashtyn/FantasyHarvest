@@ -82,7 +82,7 @@ public class playerController : MonoBehaviour, IDamageable
         controller.enabled = true;
         if (playerHP == 0)
             playerHP = originalHP;
-       // gameManager.instance.CursorLock();
+       //gameManager.instance.CursorLock();
     }
 
     private void TriggerAction(string action)
@@ -101,7 +101,7 @@ public class playerController : MonoBehaviour, IDamageable
     /// FOR WORK RELATED SPELLS, NOT FOR "SHOOTING" ENEMIES
     IEnumerator ActivateSpell()
     {
-        if (!spellActive && Input.GetButton("Shoot"))
+        if (!spellActive && Input.GetButton("Shoot") && gameManager.instance.menuManager == null)
         {
             spellActive = true;
 

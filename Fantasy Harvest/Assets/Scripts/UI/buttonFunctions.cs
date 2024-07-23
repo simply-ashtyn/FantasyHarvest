@@ -8,11 +8,9 @@ public class buttonFunctions : MonoBehaviour
     /// PAUSE MENU
     public void Resume()
     {
-        if (gameManager.instance.isPaused)
-        {
-            gameManager.instance.isPaused = false;
-            gameManager.instance.CursorLock();
-        }
+        gameManager.instance.inventoryOpen = false;
+        gameManager.instance.isPaused = false;
+        gameManager.instance.CursorLock();
     }
 
     public void Options()
@@ -28,5 +26,10 @@ public class buttonFunctions : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void DebugDeath()
+    {
+        gameManager.instance.isDead = true;
     }
 }
