@@ -21,6 +21,7 @@ ABasePlayer::ABasePlayer()
 
 	//AchievementComponent = CreateDefaultSubobject<UAchievementSystem>(TEXT("AchievementComponent"));
 
+	bInventoryOpen = false;
 	bIsCasting = false;
 	WalkSpeed = 600.f;
 	SprintSpeed = 1200.f;

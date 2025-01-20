@@ -17,6 +17,8 @@ class FANTASYHARVEST_API ABasePlayer : public ABaseCharacter
 public:
 	ABasePlayer();
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool bInventoryOpen;
 	//UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Achievement")
 	//class UAchievementSystem* AchievementComponent;
 	//UFUNCTION()
